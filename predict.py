@@ -314,7 +314,7 @@ try:
             print(feedback)
             start_client(feedback)
             print()
-            time.sleep(5)
+            time.sleep(3)
         except:
             time.sleep(5)
 
