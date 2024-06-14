@@ -59,7 +59,7 @@ RF2 = load(str(joblib_files[0]))
 
 
 #設定OPCUA伺服器位置
-server_url = 'opc.tcp://192.168.15.35:4840/freeopcua/server/' 
+server_url = 'opc.tcp://192.168.15.36:4840/freeopcua/server/' 
 #與伺服器建立OPCUA連結
 client = Client(server_url)
 
