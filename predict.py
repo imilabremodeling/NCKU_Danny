@@ -59,7 +59,7 @@ RF2 = load(str(joblib_files[0]))
 
 
 #設定OPCUA伺服器位置
-server_url = 'opc.tcp://192.168.15.80:4840/freeopcua/server/' 
+server_url = 'opc.tcp://192.168.15.36:4840/freeopcua/server/' 
 #與伺服器建立OPCUA連結
 client = Client(server_url)
 
@@ -89,7 +89,7 @@ try:
             Product_ID = temp_var.get_value()
             print("Current Type:", Product_ID)
             Product_ID_ar.append(Product_ID)
-            feedback+=("CnCAbnormalDetect&cnc&"+str(Product_ID)+"&")
+            feedback+=("CnCAbnormalDetect2&cnc2&"+str(Product_ID)+"&")
 
 
             # 假设我们知道变量的节点ID
@@ -190,7 +190,7 @@ try:
             Product_ID = temp_var.get_value()
             print("Current Type:", Product_ID)
             Product_ID_ar.append(Product_ID)
-            feedback+=("CnCAbnormalDetect&cnc&"+str(Product_ID)+"&")
+            feedback+=("CnCAbnormalDetect2&cnc2&"+str(Product_ID)+"&")
 
 
             # 假设我们知道变量的节点ID
@@ -313,9 +313,10 @@ try:
             feedback+=(str(OEE))
             print(feedback)
             start_client(feedback)
-            time.sleep(6)
+            print()
+            time.sleep(3)
         except:
-            time.sleep(6)
+            time.sleep(5)
 
 
 
