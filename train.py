@@ -83,9 +83,9 @@ accuracy_in_name = int(accuracy_score(y_test,pred)*100)
 from joblib import dump, load
 dump(RF, 'random2.joblib')
 import shutil
-shutil.copy2('random2.joblib','/result/NCKU_Danny_CnCAbnormalDetect_'+str(accuracy_in_name)+'.joblib')
+shutil.copy2('random2.joblib','/result/NCKU_Danny_CnCAbnormalDetect2_'+str(accuracy_in_name)+'.joblib')
 
-RF2 = load('/result/NCKU_Danny_CnCAbnormalDetect_'+str(accuracy_in_name)+'.joblib')     
+RF2 = load('/result/NCKU_Danny_CnCAbnormalDetect2_'+str(accuracy_in_name)+'.joblib')     
 
 from sklearn.metrics import accuracy_score
 pred = RF2.predict(x_train)
@@ -93,7 +93,7 @@ result2 = accuracy_score(y_train,pred)
 print("real predict result")
 print(result2)
 print("Success")
-check_file = os.path.isfile('/result/NCKU_Danny_CnCAbnormalDetect_'+str(accuracy_in_name)+'.joblib')
+check_file = os.path.isfile('/result/NCKU_Danny_CnCAbnormalDetect2_'+str(accuracy_in_name)+'.joblib')
 print(check_file)
 
 
